@@ -1320,3 +1320,59 @@ header.sticky .logo-wrap img {
     .footer-col h4::after { right: 50%; transform: translateX(50%); }
     .social-links { justify-content: center; }
 }
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.3;
+    }
+
+    .hero-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.6;
+    }
+
+    .main-wrapper-padding, 
+    .content-wrapper-large {
+        padding: 0 4% !important;
+    }
+
+    .service-block, 
+    .blog-card, 
+    .test-card {
+        padding: 25px 20px !important;
+        width: 100% !important;
+    }
+
+    .service-block p, 
+    .blog-info p, 
+    .test-card p {
+        font-size: 0.85rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .service-icon-wrap {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .close-panel {
+        top: 15px !important;
+        left: 15px !important;
+        font-size: 2.2rem !important;
+        z-index: 2100;
+    }
+
+    .mobile-links {
+        padding-top: 60px !important;
+    }
+
+    .mobile-links li {
+        margin: 25px 0 !important;
+    }
+
+    .mobile-links a {
+        font-size: 1.4rem !important;
+    }
+}
