@@ -113,3 +113,32 @@ const statsContainer = document.querySelector('.stats-grid-modern, .stats-row');
 if (statsContainer) {
     counterObserver.observe(statsContainer);
 }
+const filterTriggers = document.querySelectorAll('.filter-trigger');
+const masonryItems = document.querySelectorAll('.masonry-item');
+
+filterTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        // تغيير الزر النشط
+        filterTriggers.forEach(t => t.classList.remove('active'));
+        trigger.classList.add('active');
+
+        const filterKey = trigger.getAttribute('data-filter');
+
+        masonryItems.forEach(item => {
+            // إخفاء وإظهار مع أنيميشن بسيط
+            if (filterKey === 'all' || item.classList.contains(filterKey)) {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
