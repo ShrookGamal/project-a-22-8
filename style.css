@@ -1506,3 +1506,79 @@ header.sticky .logo-wrap img {
         height: auto !important;
     }
 }
+.contact-dual-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-cards-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+    height: 100%;
+}
+
+.form-container h3 {
+    color: #d5ae65;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+#whatsappForm {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+}
+
+#whatsappForm input, 
+#whatsappForm select, 
+#whatsappForm textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(213, 174, 101, 0.2);
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+#whatsappForm select option {
+    background: #262721;
+    color: #fff;
+}
+
+#whatsappForm button {
+    background: #d5ae65;
+    color: #262721;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#whatsappForm button:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .contact-dual-layout {
+        grid-template-columns: 1fr;
+    }
+}

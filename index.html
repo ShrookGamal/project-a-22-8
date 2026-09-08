@@ -561,35 +561,57 @@
         <div class="contact-header">
             <span class="c-badge">قنوات التواصل المباشر</span>
             <h2 class="c-main-title">نسعد بخدمتكم في <span>بصمة أرين</span></h2>
-            <p class="c-subtitle">تواصل معنا الآن للحصول على عرض سعر مخصص لمشروعك أو لطلب استشارة فنية  من خبرائنا في جدة.</p>
+            <p class="c-subtitle">تواصل معنا الآن للحصول على عرض سعر مخصص لمشروعك أو لطلب استشارة فنية من خبرائنا في جدة.</p>
         </div>
 
-        <div class="contact-grid-top">
-            <a href="tel:0564433538" class="glass-card-item">
-                <div class="g-icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="g-info">
-                    <h3>اتصال مباشر</h3>
-                    <span dir="ltr">0564433538</span>
-                </div>
-            </a>
+        <div class="contact-dual-layout">
+            
+            <div class="contact-cards-side">
+                <a href="tel:0564433538" class="glass-card-item">
+                    <div class="g-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="g-info">
+                        <h3>اتصال مباشر</h3>
+                        <span dir="ltr">0564433538</span>
+                    </div>
+                </a>
 
-            <a href="https://wa.me/966545484814" target="_blank" class="glass-card-item">
-                <div class="g-icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="g-info">
-                    <h3>واتساب</h3>
-                    <span dir="ltr">0545484814</span>
-                </div>
-            </a>
-        </div>
+                <a href="https://wa.me/966545484814" target="_blank" class="glass-card-item">
+                    <div class="g-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="g-info">
+                        <h3>واتساب</h3>
+                        <span dir="ltr">0545484814</span>
+                    </div>
+                </a>
 
-        <div class="address-full-box">
-            <div class="glass-card-item full-width-card">
-                <div class="g-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="g-info">
-                    <h3>المقر الرئيسي</h3>
-                    <span>جده - طريق مكه القديم - كيلو ٢٣</span>
+                <div class="glass-card-item">
+                    <div class="g-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="g-info">
+                        <h3>المقر الرئيسي</h3>
+                        <span>جده - طريق مكه القديم - كيلو ٢٣</span>
+                    </div>
                 </div>
             </div>
+
+            <div class="contact-form-side">
+                <div class="glass-card-item form-container">
+                    <h3>طلب خدمة </h3>
+                    <form id="whatsappForm">
+                        <input type="text" id="name" placeholder="الاسم " required>
+                        <input type="tel" id="phone" placeholder="رقم الجوال" required>
+                        <select id="service">
+                            <option value="غير محدد">نوع الخدمة المطلوبة</option>
+                            <option value="توريد وتركيب رخام">توريد وتركيب رخام</option>
+                            <option value="بورسلان ">أعمال البورسلان </option>
+                            <option value=" سيراميك">أعمال السيراميك</option>
+                            <option value="تكسية واجهات حجر">تكسية واجهات حجر</option>
+                            <option value="تفصيل مغاسل">تفصيل مغاسل رخام</option>
+                        </select>
+                        <textarea id="message" rows="4" placeholder="تفاصيل المشروع أو المساحة"></textarea>
+                        <button type="button" onclick="sendToWhatsApp()">إرسال عبر الواتساب <i class="fab fa-whatsapp"></i></button>
+                    </form>
+                </div>
+            </div>
+
         </div>
 
         <div class="map-container-box">

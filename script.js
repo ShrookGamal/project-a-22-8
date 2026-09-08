@@ -142,3 +142,24 @@ filterTriggers.forEach(trigger => {
         });
     });
 });
+function sendToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    if (name === "" || phone === "") {
+        alert("يرجى ملء الاسم ورقم الجوال");
+        return;
+    }
+
+    const whatsappNumber = "966545484814";
+    const text = `*طلب خدمة جديد من الموقع*%0A%0A` +
+                 `*الاسم:* ${name}%0A` +
+                 `*الجوال:* ${phone}%0A` +
+                 `*الخدمة:* ${service}%0A` +
+                 `*التفاصيل:* ${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, '_blank');
+}
