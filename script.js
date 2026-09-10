@@ -118,14 +118,12 @@ const masonryItems = document.querySelectorAll('.masonry-item');
 
 filterTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
-        // تغيير الزر النشط
         filterTriggers.forEach(t => t.classList.remove('active'));
         trigger.classList.add('active');
 
         const filterKey = trigger.getAttribute('data-filter');
 
         masonryItems.forEach(item => {
-            // إخفاء وإظهار مع أنيميشن بسيط
             if (filterKey === 'all' || item.classList.contains(filterKey)) {
                 item.style.display = 'block';
                 setTimeout(() => {
